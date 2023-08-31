@@ -1,0 +1,28 @@
+{
+  "name": "checklist-creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm update && npm fund && npm run build && node dist/app.js",
+    "build": "npm run deploy && npm run lint && tsc",
+    "deploy": "node tools/deploy.js",
+    "lint": "eslint ./src/**/*.ts",
+    "lint-fix": "eslint ./src/**/*.ts --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.48.0",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.5",
+    "@typescript-eslint/eslint-plugin": "^6.5.0"
+  }
+}

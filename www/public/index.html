@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <!-- Preload css -->
+        <link rel="preload" href="css/style.css" as="style">
+        <!-- Preload JS -->
+        <link rel="preload" href="js/script.js" as="script">
+        <!-- Load css -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Load JS -->
+        <script src="js/script.js" defer></script>
+        <title>Checklist</title>
+    </head>
+    <body>
+        <div id="checklist-container">
+            <div id="steps"></div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-text">0%</div>
+            <div data-value="0" class="progress-bar"></div>
+        </div>
+        <button id="print">Export PDF</button>
+    </body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    overflow: hidden;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 0.8;
+}
+
+.checkbox {
+    display: inline-block;
+    margin-right: 8px;
+    background-color: #fff;
+    border: 1px solid #767676;
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.checkbox[data-state=unchecked] {
+    background-color: #fff;
+}
+
+.checkbox[data-state=checked] {
+    border: 1px solid #00693a;
+    background-color: #00a65a;
+}
+
+.checkbox[data-state=not-applicable] {
+    border: 1px solid #690000;
+    background-color: #d13333;
+}
+
+p {
+    display: inline-block;
+}
+
+p[data-state=incomplete] {
+    color: #000;
+    text-decoration: none;
+}
+
+p[data-state=complete] {
+    color: #00a65a;
+    text-decoration: none;
+}
+
+p[data-state=strike-through] {
+    text-decoration: line-through;
+    font-style: italic;
+    color: #494949;
+}
+
+.step {
+    margin-bottom: -15px;
+}
+
+.content {
+    font-size: 18px;
+}
+
+.nested-content {
+    margin-left: 10px;
+    margin-top: -20px;
+    font-size: 16px;
+}
+
+.progress-container {
+    width: 200px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #767676;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #00a65a;
+    width: 0%;
+    transition: width 0.75s ease-in-out;
+}
+
+.progress-text {
+    color: #000;
+    position: absolute;
+    text-align: center;
+    text-indent: 10px;
+    margin-top: 4.5px;
+}
+
+#print {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #fff;
+    border: 1px solid #767676;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#print:hover {
+    background-color: #447fff;
+    border: 1px solid #1a5dee;
+    color: #fff;
+}
+
+@media print { 
+    #print {
+        display: none;
+    }
+ }
