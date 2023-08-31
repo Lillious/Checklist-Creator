@@ -4,9 +4,10 @@
       "target": "ES2017",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
   
       /* Modules */
-      "module": "ES2022",                                  /* Specify what module code is generated. */
+      "module": "ESNext",                                  /* Specify what module code is generated. */
       "rootDir": "./src",                                     /* Specify the root folder within your source files. */
       "moduleResolution": "node",                          /* Specify how TypeScript looks up a file from a given module specifier. */
+      "resolveJsonModule": true,
   
       /* Emit */
       "sourceMap": false,                                   /* Create source map files for emitted JavaScript files. */

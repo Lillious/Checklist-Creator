@@ -1,0 +1,76 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Checklist - OpenAPI 3.1",
+      "description": "",
+      "termsOfService": "http://swagger.io/terms/",
+      "contact": {
+        "email": "apiteam@swagger.io"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      },
+      "version": "1.0.11"
+    },
+    "externalDocs": {
+      "description": "Find out more about Swagger",
+      "url": "http://swagger.io"
+    },
+    "servers": [
+      {
+        "url": "http://localhost/api/v1"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Main API",
+        "description": null
+      }
+    ],
+    "paths": {
+      "/status": {
+        "get": {
+          "tags": [
+            "Main API"
+          ],
+          "summary": "Checks the status of the api",
+          "operationId": "status",
+          "responses": {
+            "200": {
+              "description": "Online",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Status"
+                  }
+                }
+              }
+            },
+            "503": {
+              "description": "Service Unavailable",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Status"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Status": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
